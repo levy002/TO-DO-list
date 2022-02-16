@@ -18,6 +18,12 @@ const createTodo = () => {
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = 'checkbox';
+      if (a.completed === true) { checkbox.checked = 'checked'; }
+
+      checkbox.onclick = (e) => {
+        todo.completedTodo(e.target.checked, a.index);
+      };
+
       descrptContainer.appendChild(checkbox);
 
       const descrpt = document.createElement('p');
@@ -54,5 +60,11 @@ const createTodo = () => {
     listSection.appendChild(listContainer);
   }
 };
+
+// const clearCompleted = document.getElementById('clear-completed');
+// clearCompleted.addEventListener('click', () => {
+//   todo.clearCompleted();
+//   createTodo();
+// });
 
 export { createTodo, todo };
