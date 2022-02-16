@@ -39,11 +39,8 @@ const createTodo = () => {
         list.style.backgroundColor = 'greenyellow';
         list.appendChild(deleteIcon);
         dragIcon.style.display = 'none';
-        descrpt.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            todo.editTodo(descrpt.innerHTML, a.index);
-            createTodo();
-          }
+        descrpt.addEventListener('keydown', () => {
+          todo.editTodo(descrpt.innerHTML, a.index);
         });
       };
       deleteIcon.onclick = () => {
