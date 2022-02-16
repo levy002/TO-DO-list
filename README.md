@@ -33,6 +33,7 @@ Open index.html in Chrome
 
 - GitHub: [Levy Ukwishaka](https://github.com/levy002)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/levy-ukwishaka-405391223/)
+- Twitter: [Twitter](https://twitter.com/levy_ukwishaka)
 
 ## 🤝 Contributing
 
