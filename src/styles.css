@@ -113,11 +113,7 @@ i {
   height: 20px;
 }
 
-/* .fa-times {
-  display: none;
-} */
-
-.clear-completed {
+#clear-completed {
   background-color: rgb(207, 199, 199);
   justify-content: center;
   cursor: pointer;
