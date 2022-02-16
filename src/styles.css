@@ -88,8 +88,8 @@ i {
 }
 
 .todo:hover {
- cursor: pointer;
- background-color: greenyellow;
+  cursor: pointer;
+  background-color: greenyellow;
 }
 
 .todo div {
