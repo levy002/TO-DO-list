@@ -61,10 +61,4 @@ const createTodo = () => {
   }
 };
 
-// const clearCompleted = document.getElementById('clear-completed');
-// clearCompleted.addEventListener('click', () => {
-//   todo.clearCompleted();
-//   createTodo();
-// });
-
 export { createTodo, todo };
