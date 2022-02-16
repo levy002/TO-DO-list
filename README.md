@@ -22,10 +22,13 @@ A Web Browser (preferably Google Chrome)
 ### Setup
 
 - Clone the GitHub Repository
-- Install npm package manager
+- run this commands in your terminal:
+     - `npm install`
+     - `npm run build`
+     - `npm start`
 
 ### Usage
-Open index.html in Chrome
+after running `npm start` the website will be opened automatically on your default browser.
 
 ## Authors
 

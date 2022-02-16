@@ -1,7 +1,12 @@
-import createTodo from './loadList.js';
+import { createTodo, todo } from './displayList.js';
 
 const populate = () => {
-  createTodo();
+  if (localStorage.getItem('todos')) {
+    todo.getStoredTodos();
+    createTodo();
+  } else {
+    createTodo();
+  }
 };
 
 export default populate;
