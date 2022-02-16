@@ -1,4 +1,6 @@
 # TO DO list
+![nshoot1](https://user-images.githubusercontent.com/87197412/154266221-fa1fe90a-c8c2-440c-a7c6-529ee06ae2f3.png)
+![nshoot2](https://user-images.githubusercontent.com/87197412/154266243-64a84398-8d10-4e63-afc4-0259fadafb96.png)
 
 ## Built With
 
@@ -20,10 +22,13 @@ A Web Browser (preferably Google Chrome)
 ### Setup
 
 - Clone the GitHub Repository
-- Install npm package manager
+- run this commands in your terminal:
+     - `npm install`
+     - `npm run build`
+     - `npm start`
 
 ### Usage
-Open index.html in Chrome
+after running `npm start` the website will be opened automatically on your default browser.
 
 ## Authors
 
