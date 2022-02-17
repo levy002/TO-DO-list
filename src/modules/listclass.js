@@ -34,4 +34,17 @@ export default class TodoList {
       this.allTodos[index - 1].description = newValue;
       this.saveTodo();
     }
+
+    completedTodo(status, index) {
+      this.allTodos[index - 1].completed = status;
+      this.saveTodo();
+    }
+
+    clearCompleted() {
+      this.allTodos = this.allTodos.filter((b) => b.completed === false);
+      for (let i = 0; i < this.allTodos.length; i += 1) {
+        this.allTodos[i].index = i + 1;
+      }
+      this.saveTodo();
+    }
 }
