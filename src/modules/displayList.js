@@ -2,7 +2,6 @@ import TodoList from './listclass.js';
 
 const todo = new TodoList();
 const listSection = document.querySelector('.list-section');
-
 const createTodo = () => {
   listSection.replaceChildren();
   if (todo.allTodos.length > 0) {
@@ -18,11 +17,9 @@ const createTodo = () => {
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = 'checkbox';
-      if (a.completed === true) { checkbox.checked = 'checked'; }
-
-      checkbox.onclick = (e) => {
-        todo.completedTodo(e.target.checked, a.index);
-      };
+      if (a.completed === true) {
+        checkbox.checked = 'checked';
+      }
 
       descrptContainer.appendChild(checkbox);
 
@@ -37,18 +34,29 @@ const createTodo = () => {
       list.appendChild(dragIcon);
 
       const deleteIcon = document.createElement('i');
-      deleteIcon.className = 'fa fa-times';
+      deleteIcon.className = 'fa fa-trash';
       deleteIcon.id = a.index;
+      list.appendChild(deleteIcon);
+      deleteIcon.style.display = 'none';
+
+      checkbox.addEventListener('click', (e) => {
+        if (checkbox.checked === true) {
+          descrpt.classList.add('todo-done');
+        } else {
+          descrpt.classList.remove('todo-done');
+        }
+        todo.completedTodo(e.target.checked, a.index);
+      });
 
       list.onclick = () => {
         descrpt.contentEditable = 'true';
-        list.style.backgroundColor = 'greenyellow';
-        list.appendChild(deleteIcon);
+        deleteIcon.style.display = 'block';
         dragIcon.style.display = 'none';
         descrpt.addEventListener('keydown', () => {
           todo.editTodo(descrpt.innerHTML, a.index);
         });
       };
+
       deleteIcon.onclick = () => {
         todo.deleteTodo(a.index);
         todo.saveTodo();

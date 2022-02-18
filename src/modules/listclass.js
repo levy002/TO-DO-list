@@ -42,9 +42,25 @@ export default class TodoList {
 
     clearCompleted() {
       this.allTodos = this.allTodos.filter((b) => b.completed === false);
-      for (let i = 0; i < this.allTodos.length; i += 1) {
-        this.allTodos[i].index = i + 1;
-      }
+      this.updateIndex();
       this.saveTodo();
+    }
+
+    clearAll() {
+      this.allTodos.splice(0, this.allTodos.length);
+      this.saveTodo();
+    }
+
+    updateIndex() {
+      this.allTodos.map((a) => {
+        a.index = (this.allTodos.indexOf(a) + 1);
+        return a;
+      });
+    }
+
+    todoDone(element) {
+      if (this.allTodos.completed === true) {
+        element.style.color = 'red';
+      }
     }
 }
