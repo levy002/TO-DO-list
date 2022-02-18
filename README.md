@@ -1,6 +1,5 @@
 # TO DO list
-![nshoot1](https://user-images.githubusercontent.com/87197412/154266221-fa1fe90a-c8c2-440c-a7c6-529ee06ae2f3.png)
-![nshoot2](https://user-images.githubusercontent.com/87197412/154266243-64a84398-8d10-4e63-afc4-0259fadafb96.png)
+![appPic](https://user-images.githubusercontent.com/87197412/154763876-426f95b5-9ddf-492c-925d-c9581647065e.png)
 
 ## Built With
 
