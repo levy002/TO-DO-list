@@ -52,8 +52,6 @@ Give a ⭐️ if you like this project!
 
 - Microverse offered guidance on how to make the project more professional
 
-
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
