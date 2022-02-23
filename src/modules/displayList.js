@@ -1,9 +1,9 @@
 import TodoList from './listclass.js';
 
 const todo = new TodoList();
-const listSection = document.querySelector('.list-section');
 
 const createTodo = () => {
+  const listSection = document.querySelector('.list-section');
   listSection.replaceChildren();
   if (todo.allTodos.length > 0) {
     listSection.style.display = 'block';

@@ -1,6 +1,7 @@
-const createMockDocument = () => {
+const createMockDocument = (value) => {
   document.body.innerHTML = `
-  <ul>
+  <input type="text" id="new-todo" value=${value}/>
+  <ul class="container">
     <li class="list-section"></li>
   </ul>
   `;
