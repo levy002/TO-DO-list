@@ -14,8 +14,7 @@ const createTodo = () => {
       const list = document.createElement('li');
       list.className = 'todo';
 
-      const descrptContainer =
-        document.createElement('div');
+      const descrptContainer = document.createElement('div');
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = 'checkbox';

@@ -10,6 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "testEnvironment": "jsdom",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/levy002/TO-DO-list.git"
