@@ -1,4 +1,5 @@
 import TodoList from './listclass.js';
+import deleteTask from './deleteTask.js';
 
 const todo = new TodoList();
 
@@ -52,9 +53,7 @@ const createTodo = () => {
         });
       };
       deleteIcon.onclick = () => {
-        todo.deleteTodo(a.index);
-        todo.saveTodo();
-        createTodo();
+        deleteTask(a.index);
       };
       listContainer.append(list);
       return list;
@@ -63,4 +62,4 @@ const createTodo = () => {
   }
 };
 
-export { createTodo, todo };
+export { createTodo, todo, deleteTask };
