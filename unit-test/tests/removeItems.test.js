@@ -1,6 +1,7 @@
 import createMockDocument from '../mocks/documentMock.js';
 import { getAddedTodos } from '../../src/modules/newtodo.js';
-import { todo, deleteTask } from '../../src/modules/displayList.js';
+import { todo } from '../../src/modules/displayList.js';
+import deleteTask from '../../src/modules/deleteTask.js';
 
 function addInputDescription(value, input) {
   input.value = value;

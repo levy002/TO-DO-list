@@ -6,4 +6,10 @@ const deleteTask = (index) => {
   createTodo();
 };
 
+document.addEventListener('click', (e) => {
+  if (e.target.className === 'fa fa-times') {
+    deleteTask(e.target.id);
+  }
+});
+
 export default deleteTask;
