@@ -14,11 +14,14 @@ const createTodo = () => {
       const list = document.createElement('li');
       list.className = 'todo';
 
-      const descrptContainer = document.createElement('div');
+      const descrptContainer =
+        document.createElement('div');
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = 'checkbox';
-      if (a.completed === true) { checkbox.checked = 'checked'; }
+      if (a.completed === true) {
+        checkbox.checked = 'checked';
+      }
 
       checkbox.onclick = (e) => {
         todo.completedTodo(e.target.checked, a.index);

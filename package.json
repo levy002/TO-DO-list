@@ -7,8 +7,8 @@
     "build": "webpack",
     "start": "webpack serve --open",
     "deploy": "gh-pages -d dist",
-    "test": "Jest",
-    "test:watch": "Jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
