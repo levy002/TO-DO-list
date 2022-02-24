@@ -47,9 +47,6 @@ const createTodo = () => {
         list.style.backgroundColor = 'greenyellow';
         list.appendChild(deleteIcon);
         dragIcon.style.display = 'none';
-        descrpt.addEventListener('keydown', () => {
-          todo.editTodo(descrpt.innerHTML, a.index);
-        });
       };
 
       listContainer.append(list);
