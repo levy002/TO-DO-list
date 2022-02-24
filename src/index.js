@@ -14,9 +14,3 @@ document.addEventListener('click', (e) => {
     deleteTask(e.target.id);
   }
 });
-
-document.addEventListener('keydown', (e) => {
-  if (e.target.id === 'task-description') {
-    todo.editTodo(e.target, a.index);
-  }
-});

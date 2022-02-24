@@ -23,11 +23,15 @@ export default class TodoList {
   }
 
   getStoredTodos() {
-    this.allTodos = JSON.parse(localStorage.getItem('todos'));
+    this.allTodos = JSON.parse(
+      localStorage.getItem('todos'),
+    );
   }
 
   editTodo(paragraph, index) {
-    this.allTodos[index - 1].description = paragraph.innerText;
+    this.allTodos[index - 1].description =
+      paragraph.textContent;
+    console.log(this.allTodos[index - 1].description);
     this.saveTodo();
   }
 
@@ -37,7 +41,9 @@ export default class TodoList {
   }
 
   clearCompleted() {
-    this.allTodos = this.allTodos.filter((b) => b.completed === false);
+    this.allTodos = this.allTodos.filter(
+      (b) => b.completed === false,
+    );
     this.updateIndex();
     this.saveTodo();
   }
@@ -49,7 +55,7 @@ export default class TodoList {
 
   updateIndex() {
     this.allTodos.map((a) => {
-      a.index = (this.allTodos.indexOf(a) + 1);
+      a.index = this.allTodos.indexOf(a) + 1;
       return a;
     });
   }
