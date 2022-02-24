@@ -11,8 +11,7 @@ describe('edit task', () => {
     todo.allTodos = [];
     createMockDocument('description-1');
     localStorage.clear();
-    const listSection =
-      document.querySelector('.list-section');
+    const listSection = document.querySelector('.list-section');
     const newTodo = document.getElementById('new-todo');
     getAddedTodos();
     addInputDescription('description-2', newTodo);
@@ -27,7 +26,6 @@ describe('edit task', () => {
     paragraph.textContent = newDescription;
 
     todo.editTodo(paragraph, index);
-    console.log(paragraph.textContent);
 
     expect(todo.allTodos[index - 1].description).toEqual(
       newDescription,

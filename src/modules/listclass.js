@@ -29,8 +29,7 @@ export default class TodoList {
   }
 
   editTodo(paragraph, index) {
-    this.allTodos[index - 1].description =
-      paragraph.textContent;
+    this.allTodos[index - 1].description = paragraph.textContent;
     this.saveTodo();
   }
 

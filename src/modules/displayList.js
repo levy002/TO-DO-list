@@ -3,8 +3,7 @@ import TodoList from './listclass.js';
 const todo = new TodoList();
 
 const createTodo = () => {
-  const listSection =
-    document.querySelector('.list-section');
+  const listSection = document.querySelector('.list-section');
   listSection.replaceChildren();
   if (todo.allTodos.length > 0) {
     listSection.style.display = 'block';
@@ -15,8 +14,7 @@ const createTodo = () => {
       const list = document.createElement('li');
       list.className = 'todo';
 
-      const descrptContainer =
-        document.createElement('div');
+      const descrptContainer = document.createElement('div');
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = 'checkbox';
