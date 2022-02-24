@@ -18,11 +18,7 @@ export default class TodoList {
 
     deleteTodo(indx) {
       this.allTodos.splice(indx - 1, 1);
-      this.allTodos.forEach((t) => {
-        if (t.index > indx) {
-          t.index -= 1;
-        }
-      });
+      this.updateIndex();
       this.saveTodo();
     }
 
