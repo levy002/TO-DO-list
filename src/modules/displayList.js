@@ -47,10 +47,17 @@ const createTodo = () => {
         list.style.backgroundColor = 'greenyellow';
         list.appendChild(deleteIcon);
         dragIcon.style.display = 'none';
-        descrpt.addEventListener('keydown', () => {
-          todo.editTodo(descrpt.innerHTML, a.index);
-        });
       };
+
+      descrpt.addEventListener('keyup', (e) => {
+        if (e.target.id === 'task-description') {
+          if (e.key === 'Enter') {
+            createTodo();
+          } else {
+            todo.editTodo(e.target, a.index);
+          }
+        }
+      });
 
       listContainer.append(list);
       return list;
